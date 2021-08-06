@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="Remarks" max_length="100" name="remarks" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="request_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Task type" max_length="40" name="task_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hardware" sequence="0" value="hardware"/>
+                <element inactive_on_update="false" label="Software" sequence="1" value="software"/>
+                <element inactive_on_update="false" label="Network" sequence="2" value="network"/>
+                <element inactive_on_update="false" label="Others" sequence="3" value="others"/>
+            </choice>
+        </element>
+    </element>
+</database>
